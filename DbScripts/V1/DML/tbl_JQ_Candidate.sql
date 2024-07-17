@@ -1,0 +1,10 @@
+INSERT INTO tbl_JQ_Candidate (email, degree, location, experience, department, skillset, cv_doc) VALUES ('john.doe@example.com', 'BSc Computer Science', 'New York', 5, 'IT', 'Java, SQL', NULL);
+INSERT INTO tbl_JQ_Candidate (email, degree, location, experience, department, skillset, cv_doc) VALUES ('jane.smith@example.com', 'MSc Data Science', 'San Francisco', 3, 'Data Analysis', 'Python, R, SQL', NULL);
+INSERT INTO tbl_JQ_Candidate (email, degree, location, experience, department, skillset, cv_doc) VALUES ('michael.brown@example.com', 'BSc Information Technology', 'Chicago', 2, 'Support', 'Hardware, Windows OS', NULL);
+INSERT INTO tbl_JQ_Candidate (email, degree, location, experience, department, skillset, cv_doc) VALUES ('emily.jones@example.com', 'MA Marketing', 'Boston', 4, 'Marketing', 'SEO, Google Analytics', NULL);
+INSERT INTO tbl_JQ_Candidate (email, degree, location, experience, department, skillset, cv_doc) VALUES ('david.wilson@example.com', 'PhD Computer Science', 'Seattle', 6, 'Research', 'Machine Learning, AI', NULL);
+INSERT INTO tbl_JQ_Candidate (email, degree, location, experience, department, skillset, cv_doc) VALUES ('sarah.moore@example.com', 'BSc Business Administration', 'Miami', 2, 'Administration', 'Management, Finance', NULL);
+INSERT INTO tbl_JQ_Candidate (email, degree, location, experience, department, skillset, cv_doc) VALUES ('james.taylor@example.com', 'MSc Cybersecurity', 'Austin', 5, 'Security', 'Network Security, Cryptography', NULL);
+INSERT INTO tbl_JQ_Candidate (email, degree, location, experience, department, skillset, cv_doc) VALUES ('linda.white@example.com', 'BSc Software Engineering', 'Denver', 3, 'Development', 'C#, .NET', NULL);
+INSERT INTO tbl_JQ_Candidate (email, degree, location, experience, department, skillset, cv_doc) VALUES ('robert.harris@example.com', 'MSc Project Management', 'Atlanta', 4, 'Management', 'Agile, Scrum', NULL);
+INSERT INTO tbl_JQ_Candidate (email, degree, location, experience, department, skillset, cv_doc) VALUES ('patricia.clark@example.com', 'BSc Graphic Design', 'Los Angeles', 2, 'Design', 'Photoshop, Illustrator', NULL);
