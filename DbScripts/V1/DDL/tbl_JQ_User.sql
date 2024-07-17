@@ -4,8 +4,11 @@ BEGIN
     email VARCHAR(50),
     first_name VARCHAR(50),
     last_name VARCHAR(50),
-    phone VARCHAR(15) NULL,
-    CONSTRAINT PK_tbl_JQ_Candidate PRIMARY KEY (email)
+    phone varchar(14) NULL,
+    country VARCHAR(50) NULL,
+    state VARCHAR(50) NULL,
+    city VARCHAR(50) NULL,
+    CONSTRAINT PK_tbl_JQ_User PRIMARY KEY (email)
 	);
 END
 GO

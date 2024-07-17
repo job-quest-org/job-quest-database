@@ -9,7 +9,7 @@ BEGIN
     skillset VARCHAR(255),
     cv_doc VARCHAR(255) NULL,
     CONSTRAINT PK_tbl_JQ_Candidate PRIMARY KEY (email),
-    CONSTRAINT FK_tbl_JQ_User FOREIGN KEY (email) REFERENCES tbl_JQ_User(email)
+    CONSTRAINT FK_tbl_JQ_Candidate FOREIGN KEY (email) REFERENCES tbl_JQ_User(email)
     );
 END
 GO
