@@ -3,7 +3,7 @@ BEGIN
     CREATE TABLE tbl_JQ_Candidate (
     email VARCHAR(50),
     degree VARCHAR(50),
-    location VARCHAR(100),
+    location VARCHAR(50),
     experience INT,
     department VARCHAR(50),
     skillset VARCHAR(255),
