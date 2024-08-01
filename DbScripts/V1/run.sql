@@ -6,11 +6,14 @@
 -- Execute DDL scripts
 :r $(FilePath)/DDL/tbl_JQ_User.sql
 :r $(FilePath)/DDL/tbl_JQ_Candidate.sql
+:r $(FilePath)/DDL/tbl_JQ_Recruiter.sql
 
 -- Execute DML scripts
 :r $(FilePath)/DML/tbl_JQ_User.sql
 :r $(FilePath)/DML/tbl_JQ_Candidate.sql
+:r $(FilePath)/DML/tbl_JQ_Recruiter.sql
 
 -- Execute Stored Procedures
 :r $(FilePath)/StoredProcedure/SP_Update_CandidateProfile.sql
 :r $(FilePath)/StoredProcedure/SP_UserProfileVerification.sql
+:r $(FilePath)/StoredProcedure/SP_Update_RecruiterProfile.sql

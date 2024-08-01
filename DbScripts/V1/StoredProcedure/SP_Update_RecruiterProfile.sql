@@ -1,5 +1,5 @@
 GO
-CREATE OR ALTER PROCEDURE SP_Update_CandidateProfile
+CREATE OR ALTER PROCEDURE SP_Update_RecruiterProfile
     @payload NVARCHAR(MAX)
 AS
 BEGIN 
@@ -10,13 +10,8 @@ BEGIN
             @Country NVARCHAR(50),
             @State NVARCHAR(50),
             @City NVARCHAR(50),
-            @Degree NVARCHAR(50),
-            @Location NVARCHAR(50),
-            @Experience INT,
-            @Department NVARCHAR(50),
-            @Skillset NVARCHAR(255), 
-            @CvDoc NVARCHAR(255);
-
+            @Position NVARCHAR(50),
+            @LinkedInProfile NVARCHAR(100);
     -- Parse JSON payload
     SELECT @Email = JSON_VALUE(@payload, '$.Email'),
            @FirstName = JSON_VALUE(@payload, '$.FirstName'),
@@ -25,13 +20,9 @@ BEGIN
            @Country = JSON_VALUE(@payload, '$.Country'),
            @State = JSON_VALUE(@payload, '$.State'),
            @City = JSON_VALUE(@payload, '$.City'),
-           @Degree = JSON_VALUE(@payload, '$.Degree'),
-           @Location = JSON_VALUE(@payload, '$.Location'),
-           @Experience = JSON_VALUE(@payload, '$.Experience'),
-           @Department = JSON_VALUE(@payload, '$.Department'),
-           @Skillset = JSON_VALUE(@payload, '$.Skillset'),
-           @CvDoc = JSON_VALUE(@payload, '$.CvDoc');
-	BEGIN TRY
+           @Position = JSON_VALUE(@payload, '$.Position'),
+           @LinkedInProfile = JSON_VALUE(@payload, '$.LinkedInProfile');
+    BEGIN TRY
         BEGIN TRANSACTION;
         -- Update tbl_JQ_User
         UPDATE tbl_JQ_User 
@@ -43,20 +34,15 @@ BEGIN
             city = @City,
             updated_date = GETDATE()
         WHERE email = @Email;
-
-        -- Update tbl_JQ_Candidate
-        UPDATE tbl_JQ_Candidate 
+        -- Update tbl_JQ_Recruiter
+        UPDATE tbl_JQ_Recruiter 
         SET  
-            degree = @Degree, 
-            location = @Location, 
-            experience = @Experience, 
-            department = @Department, 
-            skillset = @Skillset, 
-            cv_doc = @CvDoc
+            position = @Position, 
+            LinkedInProfile = @LinkedInProfile
         WHERE email = @Email;
         SELECT u.email, u.first_name, u.last_name, u.phone, u.country , u.state, u.city, 
-            c.degree, c.location, c.experience, c.department, c.skillset, c.cv_doc 
-            FROM tbl_JQ_User u LEFT JOIN tbl_JQ_Candidate c ON u.email = c.email 
+            r.position, r.LinkedInProfile
+            FROM tbl_JQ_User u LEFT JOIN tbl_JQ_Recruiter r ON u.email = r.email 
             WHERE u.email = @Email ;
             COMMIT TRANSACTION;
     END TRY
@@ -65,12 +51,10 @@ BEGIN
         DECLARE @ErrorMessage NVARCHAR(4000);
         DECLARE @ErrorSeverity INT;
         DECLARE @ErrorState INT;
-
         SELECT 
             @ErrorMessage = ERROR_MESSAGE(),
             @ErrorSeverity = ERROR_SEVERITY(),
             @ErrorState = ERROR_STATE();
-
         RAISERROR (@ErrorMessage, @ErrorSeverity, @ErrorState);
     END CATCH;
 END

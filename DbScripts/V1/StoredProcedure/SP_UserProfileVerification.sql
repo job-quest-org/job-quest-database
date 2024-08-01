@@ -11,11 +11,16 @@ BEGIN
     BEGIN
         INSERT INTO tbl_JQ_User (email, first_name, last_name)
         VALUES (@Email, @FirstName, @LastName);
-    END
-    IF NOT EXISTS (SELECT 1 FROM tbl_JQ_Candidate WHERE email = @Email)
-    BEGIN
-        INSERT INTO tbl_JQ_Candidate (email)
-        VALUES (@Email);
+        IF NOT EXISTS (SELECT 1 FROM tbl_JQ_Candidate WHERE email = @Email)
+        BEGIN
+            INSERT INTO tbl_JQ_Candidate (email)
+            VALUES (@Email);
+        END
+        IF NOT EXISTS (SELECT 1 FROM tbl_JQ_Recruiter WHERE email = @Email)
+        BEGIN
+            INSERT INTO tbl_JQ_Recruiter (email)
+            VALUES (@Email);
+        END
     END
 END
 GO

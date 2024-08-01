@@ -8,6 +8,8 @@ BEGIN
     country VARCHAR(50) NULL,
     state VARCHAR(50) NULL,
     city VARCHAR(50) NULL,
+    created_date DATETIME DEFAULT GETDATE(),
+    updated_date DATETIME DEFAULT GETDATE(),
     CONSTRAINT PK_tbl_JQ_User PRIMARY KEY (email)
 	);
 END
