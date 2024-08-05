@@ -3,7 +3,7 @@ BEGIN
     CREATE TABLE tbl_JQ_Candidate (
     cid BIGINT IDENTITY(10000,1),
     email VARCHAR(50),
-    degree VARCHAR(50) NULL,
+    degree VARCHAR(255) NULL,
     location VARCHAR(50) NULL,
     experience INT NULL,
     department VARCHAR(50) NULL,

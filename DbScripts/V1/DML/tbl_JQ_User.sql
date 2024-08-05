@@ -18,4 +18,4 @@ INSERT INTO tbl_JQ_User (email, first_name, last_name, phone, country, state, ci
 INSERT INTO tbl_JQ_User (email, first_name, last_name, phone, country, state, city, created_date, updated_date) VALUES ('hank.wilson@gmail.com', 'Hank', 'Wilson', '89012434567', 'India', 'Maharashtra', 'Mumbai','2023-05-13','2023-05-15');
 INSERT INTO tbl_JQ_User (email, first_name, last_name, phone, country, state, city, created_date, updated_date) VALUES ('ivy.harris@gmail.com', 'Ivy', 'Harris', '90123455678', 'India', 'Odisha', 'Bhubaneshwar','2024-02-13','2024-02-17');
 INSERT INTO tbl_JQ_User (email, first_name, last_name, phone, country, state, city, created_date, updated_date) VALUES ('jack.clark@gmail.com', 'Jack', 'Clark', '01236456789', 'India', 'West Bengal', 'Kolkata','2024-07-17','2024-09-05');
-
+INSERT INTO tbl_JQ_User (email, first_name, last_name, phone, country, state, city, created_date, updated_date) VALUES ('amarsunuwar09@gmail.com', 'Amar', 'Sunuwar', '1234567899', 'India', 'Telangana', 'Hyderabad','2021-01-01','2021-01-01');

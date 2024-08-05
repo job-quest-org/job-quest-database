@@ -18,3 +18,4 @@ INSERT INTO tbl_JQ_Recruiter (email, position, LinkedInProfile) VALUES ('james.t
 INSERT INTO tbl_JQ_Recruiter (email, position, LinkedInProfile) VALUES ('linda.white@gmail.com', 'Junior Recruiter', 'https://linkedin.com/in/lindawhite');
 INSERT INTO tbl_JQ_Recruiter (email, position, LinkedInProfile) VALUES ('robert.harris@gmail.com', 'Recruitment Manager', 'https://linkedin.com/in/robertharris');
 INSERT INTO tbl_JQ_Recruiter (email, position, LinkedInProfile) VALUES ('patricia.clark@gmail.com', 'Recruitment Specialist', 'https://linkedin.com/in/patriciaclark');
+INSERT INTO tbl_JQ_Recruiter (email, position, LinkedInProfile) VALUES ('amarsunuwar09@gmail.com', 'Recruitment Specialist', 'https://linkedin.com/in/amarsunuwar');
